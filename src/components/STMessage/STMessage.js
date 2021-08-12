@@ -11,6 +11,7 @@ export default class STMessage extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = { continue: false };
         this.expectedPerformanceChangeHandler = this.expectedPerformanceChangeHandler.bind(this);
     }
     
@@ -25,6 +26,11 @@ export default class STMessage extends React.Component {
 
         this.chart.options.data[0].dataPoints[2].y =  val;
         this.chart.render();
+
+        if (event.target.value != null && event.target.value != '' && val > 0)
+            this.setState({ continue: true });
+        else
+            this.setState({ continue: false });
     }
 
     render() {
@@ -48,7 +54,7 @@ export default class STMessage extends React.Component {
                     Indique quanto acha que vai ser seu escore: 
                     <input type="number" pattern="[0-9]*" inputmode="numeric" min={stMessage.chart.min} max={stMessage.chart.max} onChange={this.expectedPerformanceChangeHandler} />
                     <center style={{margin: "16px"}}>
-                        <Button variant="contained" color="primary" size="large" onClick={this.props.onClickNext}>
+                        <Button disabled={!this.state.continue} variant="contained" color="primary" size="large" onClick={this.props.onClickNext}>
                             {stMessage.next}
                         </Button>
                     </center>
@@ -57,8 +63,6 @@ export default class STMessage extends React.Component {
         } else {
             return(
                 <Box>
-                    Indique quanto acha que vai ser seu escore: 
-                    <input type="number" pattern="[0-9]*" inputmode="numeric" onChange={this.expectedPerformanceChangeHandler} />
                     <center style={{margin: "16px"}}>
                         <Button variant="contained" color="primary" size="large" onClick={this.props.onClickNext}>
                             {stMessage.next}
