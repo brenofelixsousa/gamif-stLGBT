@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@material-ui/core";
-import { AvatarSelection, Loading, Question } from "../";
+import { STMessage, AvatarSelection, Loading, Question } from "../";
 import { closeSession, getSessionId } from "../../sessionManager";
 import { sendUserToPosttest, notifyAnswer, notifyGame } from "../../sessionManager";
 import Context from "../../contexts/Context";
@@ -16,12 +16,14 @@ export default class Quiz extends React.Component {
             ready: false,
             headerText: null,
             textContent: null,
+            onAvatarSelection: false,
             onQuiz: false,
             avatarList: [],
         };
 
         this.changeHeader = this.changeHeader.bind(this);
         this.changeText = this.changeText.bind(this);
+        this.startAvatarSelection = this.startAvatarSelection.bind(this);
         this.startQuiz = this.startQuiz.bind(this);
         this.onAnswer = this.onAnswer.bind(this);
         this.onFinish = this.onFinish.bind(this);
@@ -29,15 +31,15 @@ export default class Quiz extends React.Component {
 
     componentDidMount() {
         let env = this.context.environment;
+        notifyGame({ environmentName: env.name });
+
+        console.log(this.context);
 
         this.setState({
             ready: true,
-            headerText: env.localization.avatarSelection.header,
-            textContent: env.localization.avatarSelection.text,
-            avatarList: env.avatarList,
+            headerText: env.localization.stMessage.header,
+            textContent: env.localization.stMessage.text,
         });
-
-        notifyGame({ environmentName: env.name });
     }
 
     changeHeader(headerText) {
@@ -46,6 +48,17 @@ export default class Quiz extends React.Component {
 
     changeText(textContent) {
         this.setState({ textContent });
+    }
+
+    startAvatarSelection() {
+        let env = this.context.environment;
+
+        this.setState({
+            onAvatarSelection: true,
+            headerText: env.localization.avatarSelection.header,
+            textContent: env.localization.avatarSelection.text,
+            avatarList: env.avatarList,
+        });
     }
 
     startQuiz() {
@@ -89,7 +102,11 @@ export default class Quiz extends React.Component {
 
         if (!this.state.ready) {
             content = ( <Loading /> );
-        } else if (!this.state.onQuiz) {
+        } else if (!this.state.onQuiz && !this.state.onAvatarSelection) {
+            content = (
+                <STMessage onClickNext={this.startAvatarSelection} />
+            );
+        } else if (!this.state.onQuiz && this.state.onAvatarSelection) {
             content = (
                 <AvatarSelection
                     setAvatar={player.setAvatar}
