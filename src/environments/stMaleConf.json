@@ -11,10 +11,12 @@
             "text": "Estudos cientificos tem demostrado que homens são os melhores em matemáticas. Agora, vamos a fazer um teste de lógica matemática.",
             "next": "Continuar",
             "chart": {
+                "min": 0, "max": 50,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
                     { "label": "Homens",  "y": 50  },
-                    { "label": "Mulheres", "y": 10  }
+                    { "label": "Mulheres", "y": 10  },
+                    { "label": "Você", "y": 0 }
                 ]
             }
         },

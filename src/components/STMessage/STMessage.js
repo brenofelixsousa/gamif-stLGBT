@@ -8,6 +8,22 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export default class STMessage extends React.Component {
     static contextType = Context;
 
+    constructor(props) {
+        super(props);
+        this.expectedPerformanceChangeHandler = this.expectedPerformanceChangeHandler.bind(this);
+    }
+    
+    expectedPerformanceChangeHandler(event) {
+        let stMessage = this.context.environment.localization.stMessage;
+
+        var val = parseInt(event.target.value);
+        if (val > stMessage.chart.max) val = stMessage.chart.max;
+        if (val < stMessage.chart.min) val = stMessage.chart.min;
+
+        this.chart.options.data[0].dataPoints[2].y =  val;
+        this.chart.render();
+    }
+
     render() {
         let localization = this.context.environment.localization;
         let stMessage = localization.stMessage;
@@ -26,7 +42,8 @@ export default class STMessage extends React.Component {
                     <Box>
                         <CanvasJSChart options = {options}  onRef = {ref => this.chart = ref} />
                     </Box>
-    
+                    Indique quanto acha que vai ser seu escore: 
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" min={stMessage.chart.min} max={stMessage.chart.max} onChange={this.expectedPerformanceChangeHandler} />
                     <center style={{margin: "16px"}}>
                         <Button variant="contained" color="primary" size="large" onClick={this.props.onClickNext}>
                             {stMessage.next}
@@ -37,6 +54,8 @@ export default class STMessage extends React.Component {
         } else {
             return(
                 <Box>
+                    Indique quanto acha que vai ser seu escore: 
+                    <input type="number" pattern="[0-9]*" inputmode="numeric" onChange={this.expectedPerformanceChangeHandler} />
                     <center style={{margin: "16px"}}>
                         <Button variant="contained" color="primary" size="large" onClick={this.props.onClickNext}>
                             {stMessage.next}
