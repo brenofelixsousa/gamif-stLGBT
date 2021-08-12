@@ -10,7 +10,13 @@
             "header": "0 - Mensagem",
             "text": "Em recentes estudos mulheres tem superado meninas nos testes de matemáticas. Agora, vamos a fazer um teste de lógica matemática.",
             "next": "Continuar",
-            "img": "https://www.ams.org/images/women-poster.jpg"
+            "chart": {
+                "title": "Escores em matemática lógica",
+                "dataPoints": [
+                    { "label": "Homens",  "y": 10  },
+                    { "label": "Mulheres", "y": 50  }
+                ]
+            }
         },
         "avatarSelection": {
             "header": "1 - Personalize",
