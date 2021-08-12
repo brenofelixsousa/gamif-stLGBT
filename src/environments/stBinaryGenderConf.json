@@ -8,14 +8,14 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Estudos cientificos tem demostrado que homens são os melhores em matemáticas. Agora, vamos a fazer um teste de lógica matemática.",
+            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) de graduação e pós-graduação de cursos de Ciências Exatas possuem sentimento de desempenho baixo quando se comparado com grupos héteros cis, além disto, pode ser observado que a possibilidade de evasão e o baixo desempenho em matemática e lógica é bem maior para grupos de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transgênero e outros grupos minoritários) em cursos de Ciências Exatas. Agora, vamos a fazer um teste de lógica matemática.",
             "next": "Continuar",
             "chart": {
                 "min": 0, "max": 50,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Homens",  "y": 50  },
-                    { "label": "Mulheres", "y": 10  },
+                    { "label": "Heterosexuais",  "y": 45  },
+                    { "label": "LGBTQIA+", "y": 27  },
                     { "label": "Você", "y": 0 }
                 ]
             }
@@ -60,8 +60,8 @@
     }],
 
     "avatarList": [
-        "./assets/stMale/images/avatar1.png",
-        "./assets/stMale/images/avatar2.png",
-        "./assets/stMale/images/avatar3.png"
+        "./assets/stBinaryGender/images/avatar1.png",
+        "./assets/stBinaryGender/images/avatar2.png",
+        "./assets/stBinaryGender/images/avatar3.png"
     ]
 }

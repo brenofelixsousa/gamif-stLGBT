@@ -8,14 +8,14 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Em recentes estudos mulheres tem superado meninas nos testes de matemáticas. Agora, vamos a fazer um teste de lógica matemática.",
+            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) em de Ciências Exatas tem desempenho maior quando se comparado com grupos héteros cis. Agora, vamos a fazer um teste de lógica matemática.",
             "next": "Continuar",
             "chart": {
                 "min": 0, "max": 50,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Homens",  "y": 10  },
-                    { "label": "Mulheres", "y": 50  },
+                    { "label": "Heterosexuais",  "y": 27  },
+                    { "label": "LGBTQIA+", "y": 45  },
                     { "label": "Você", "y": 0 }
                 ]
             }
