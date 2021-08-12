@@ -1,11 +1,15 @@
 {
     "localization": {
-        "pageTitle": "Estudo sobre ansiedade",
         "title": "Etapa II - Tutor",
         "points": "Pontos",
         "rightAnswers": "Acertos",
         "ranking": "Ranking",
         "myTrophies": "Meus troféus",
+        "stMessage": {
+            "header": "0 - Mensagem",
+            "text": "Agora, vamos a fazer um teste de lógica matemática",
+            "next": "Continuar"
+        },
         "avatarSelection": {
             "header": "1 - Personalize",
             "text": "Escolha um avatar:",

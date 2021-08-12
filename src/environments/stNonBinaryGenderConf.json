@@ -1,10 +1,25 @@
 {
     "localization": {
+        "pageTitle": "Estudo sobre gamificação",
         "title": "Etapa II - Tutor",
         "points": "Pontos",
         "rightAnswers": "Acertos",
         "ranking": "Ranking",
         "myTrophies": "Meus troféus",
+        "stMessage": {
+            "header": "0 - Mensagem",
+            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) em de Ciências Exatas tem desempenho maior quando se comparado com grupos héteros cis. Agora, vamos a fazer um teste de lógica matemática.",
+            "next": "Continuar",
+            "chart": {
+                "min": 0, "max": 50,
+                "title": "Escores em matemática lógica",
+                "dataPoints": [
+                    { "label": "Heterosexuais",  "y": 27  },
+                    { "label": "LGBTQIA+", "y": 45  },
+                    { "label": "Você", "y": 0 }
+                ]
+            }
+        },
         "avatarSelection": {
             "header": "1 - Personalize",
             "text": "Escolha um avatar:",
@@ -22,31 +37,27 @@
     "postTest": "",
 
     "theme": {
-        "primary": "blue",
-        "secondary": "blue"
+        "primary": "purple",
+        "secondary": "purple"
     },
 
+
     "ranking": [{
-        "name": "Alan",
+        "name": "Everton (homosexual)",
         "points": 79,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
-        "name": "Valentine",
+        "name": "Maria (asexual)",
         "points": 75,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
-        "name": "Francis",
+        "name": "Francis (homosexual)",
         "points": 63,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
-        "name": "Danni",
+        "name": "Dan (transexual)",
         "points": 27,
         "avatar": "./assets/{theme}/images/ranking4.png"
-    }],
+    }]
 
-    "avatarList": [
-        "./assets/stMale/images/avatar1.png",
-        "./assets/stMale/images/avatar2.png",
-        "./assets/stMale/images/avatar3.png"
-    ]
 }

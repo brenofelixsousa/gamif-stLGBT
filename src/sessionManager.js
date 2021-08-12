@@ -103,6 +103,15 @@ export function sendUserToPosttest(url) {
     });
 }
 
+export function notifyExpectedPerformance(expectedPerformance) {
+    return axios.get("/notifyExpectedPerformance", {
+        params: {
+            sessionId: getSessionId(),
+            expectedPerformance: expectedPerformance,
+        }
+    });
+}
+
 export function notifyAnswer(questionId, answer) {
     return axios.get("/notifyAnswer", {
         params: {
