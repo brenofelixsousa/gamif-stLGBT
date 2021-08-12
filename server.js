@@ -115,6 +115,22 @@ app.get("/setUserSentToPosttest", (req, res) => {
     });
 });
 
+app.get("/notifyExpectedPerformance", (req, res) => {
+    const { sessionId, expectedPerformance } = req.query;
+
+    if (!sessionId || !expectedPerformance)
+        return res.status(401).end("invalid params");
+
+    sessionManager.notifyExpectedPerformance(sessionId, expectedPerformance)
+    .then(() => {
+        res.status(200).end();
+    })
+    .catch(e => {
+        console.error(e);
+        res.status(401).end(e);
+    });
+});
+
 app.get("/notifyAnswer", (req, res) => {
     const { sessionId, questionId, answer } = req.query;
 

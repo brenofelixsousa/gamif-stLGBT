@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button } from "@material-ui/core";
 import Context from "../../contexts/Context";
+import { notifyExpectedPerformance } from "../../sessionManager";
 
 import CanvasJSReact from './canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -19,6 +20,8 @@ export default class STMessage extends React.Component {
         var val = parseInt(event.target.value);
         if (val > stMessage.chart.max) val = stMessage.chart.max;
         if (val < stMessage.chart.min) val = stMessage.chart.min;
+
+        notifyExpectedPerformance(val);
 
         this.chart.options.data[0].dataPoints[2].y =  val;
         this.chart.render();

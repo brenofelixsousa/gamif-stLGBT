@@ -200,6 +200,20 @@ function setUserSentToPosttest(sessionId, url) {
     });
 }
 
+function notifyExpectedPerformance(sessionId, expectedPerformance) {
+    return new Promise((resolve, reject) => {
+        if (!sessionExists(sessionId)) {
+            return reject("invalid session");
+        } else if (!sessionId || !expectedPerformance) {
+            return reject("invalid params");
+        }
+
+        sessionData[sessionId].expectedPerformance = expectedPerformance;
+
+        resolve(sessionData[sessionId].expectedPerformance);
+    });
+}
+
 function notifyAnswer(sessionId, questionId, answer) {
     return new Promise((resolve, reject) => {
         if (!sessionExists(sessionId)) {
@@ -279,6 +293,7 @@ module.exports = {
     setReturnFromPretest,
     setReturnFromPretestHeaders,
     setUserSentToPosttest,
+    notifyExpectedPerformance,
     notifyAnswer,
     notifyTrophyUnlock,
     notifyGame,
