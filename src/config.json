@@ -3,6 +3,6 @@
     "environments": {
         "default": "defaultConf.json",
         "stBinaryGender": "stBinaryGenderConf.json",
-        "stNonBinaryGender": "stNonBinaryGenderConf.json"
+     // "stNonBinaryGender": "stNonBinaryGenderConf.json"
     }       
 }

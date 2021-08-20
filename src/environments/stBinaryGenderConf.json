@@ -43,19 +43,19 @@
 
     "ranking": [{
         "name": "Alan (heterosexual)",
-        "points": 79,
+        "points": 195,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
         "name": "Valentine (heterosexual)",
-        "points": 75,
+        "points": 160,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
         "name": "Francis (heterosexual)",
-        "points": 63,
+        "points": 95,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
         "name": "Danni (heterosexual)",
-        "points": 27,
+        "points": 70,
         "avatar": "./assets/{theme}/images/ranking4.png"
     }],
 

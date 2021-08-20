@@ -8,8 +8,17 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Agora, vamos a fazer um teste de lógica matemática",
-            "next": "Continuar"
+            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) em de Ciências Exatas tem desempenho maior quando se comparado com grupos héteros cis. Agora, vamos a fazer um teste de lógica matemática.",
+            "next": "Continuar",
+            "chart": {
+                "min": 0, "max": 50,
+                "title": "Escores em matemática lógica",
+                "dataPoints": [
+                    { "label": "Heterosexuais",  "y": 27  },
+                    { "label": "LGBTQIA+", "y": 45  },
+                    { "label": "Você", "y": 0 }
+                ]
+            }
         },
         "avatarSelection": {
             "header": "1 - Personalize",
@@ -27,28 +36,27 @@
     "preTest": "https://weblab.nees.com.br/limesurvey/index.php/555276?lang=pt-BR&sessionId={{sessionId}}",
     "postTest": "https://weblab.nees.com.br/limesurvey/index.php/262545?newtest=Y&lang=pt-BR&sessionId={{sessionId}}",
 
-    "playSound": true,
-
     "theme": {
-        "primary": "blueGrey",
-        "secondary": "blueGrey"
+        "primary": "purple",
+        "secondary": "purple"
     },
-    
-    "ranking":  [{
-        "name": "Alan",
-        "points": 79,
+
+
+    "ranking": [{
+        "name": "Everton (homosexual)",
+        "points": 195,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
-        "name": "Valentine",
-        "points": 75,
+        "name": "Maria (asexual)",
+        "points": 170,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
-        "name": "Francis",
-        "points": 63,
+        "name": "Francis (transexual)",
+        "points": 120,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
-        "name": "Danni",
-        "points": 27,
+        "name": "Dan (homsexual)",
+        "points": 95,
         "avatar": "./assets/{theme}/images/ranking4.png"
     }],
 
