@@ -58,6 +58,13 @@
         "name": "Dan (homsexual)",
         "points": 70,
         "avatar": "./assets/{theme}/images/ranking4.png"
-    }]
+    }],
+    "avatarList": [
+        "./assets/stNonBinaryGender/images/avatar1.png",
+        "./assets/stNonBinaryGender/images/avatar2.png",
+        "./assets/stNonBinaryGender/images/avatar3.png"
+    ]
+
+    
 
 }

@@ -60,9 +60,9 @@
     }],
 
     "avatarList": [
-        "./assets/stBinaryGender/images/avatar1.png",
-        "./assets/stBinaryGender/images/avatar2.png",
-        "./assets/stBinaryGender/images/avatar3.png"
+        "./assets/default/images/avatar1.png",
+        "./assets/default/images/avatar2.png",
+        "./assets/default/images/avatar3.png"
     ],
     
     "questions": [
