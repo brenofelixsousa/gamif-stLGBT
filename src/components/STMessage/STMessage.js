@@ -51,7 +51,7 @@ export default class STMessage extends React.Component {
                     <Box>
                         <CanvasJSChart options = {options}  onRef = {ref => this.chart = ref} />
                     </Box>
-                    Indique quanto acha que vai ser seu escore: 
+                    Indique quanto acha que vai ser seu escore entre [0 - 200]: 
                     <input type="number" pattern="[0-9]*" inputmode="numeric" min={stMessage.chart.min} max={stMessage.chart.max} onChange={this.expectedPerformanceChangeHandler} />
                     <center style={{margin: "16px"}}>
                         <Button disabled={!this.state.continue} variant="contained" color="primary" size="large" onClick={this.props.onClickNext}>
