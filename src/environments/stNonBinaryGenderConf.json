@@ -11,11 +11,11 @@
             "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) em de Ciências Exatas tem desempenho maior quando se comparado com grupos héteros cis. Agora, vamos a fazer um teste de lógica matemática.",
             "next": "Continuar",
             "chart": {
-                "min": 0, "max": 50,
+                "min": 0, "max": 200,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Heterosexuais",  "y": 27  },
-                    { "label": "LGBTQIA+", "y": 45  },
+                    { "label": "Heterosexuais",  "y": 90  },
+                    { "label": "LGBTQIA+", "y": 175  },
                     { "label": "Você", "y": 0 }
                 ]
             }

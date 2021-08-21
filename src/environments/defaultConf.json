@@ -8,14 +8,14 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) em de Ciências Exatas tem desempenho maior quando se comparado com grupos héteros cis. Agora, vamos a fazer um teste de lógica matemática.",
+            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) de graduação e pós-graduação de cursos de Ciências Exatas possuem sentimento de desempenho baixo quando se comparado com grupos héteros cis, além disto, pode ser observado que a possibilidade de evasão e o baixo desempenho em matemática e lógica é bem maior para grupos de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transgênero e outros grupos minoritários) em cursos de Ciências Exatas. Agora, vamos a fazer um teste de lógica matemática.",
             "next": "Continuar",
             "chart": {
-                "min": 0, "max": 50,
+                "min": 0, "max": 200,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Heterosexuais",  "y": 27  },
-                    { "label": "LGBTQIA+", "y": 45  },
+                    { "label": "Heterosexuais",  "y": 175  },
+                    { "label": "LGBTQIA+", "y": 90  },
                     { "label": "Você", "y": 0 }
                 ]
             }
@@ -37,33 +37,32 @@
     "postTest": "https://weblab.nees.com.br/limesurvey/index.php/262545?newtest=Y&lang=pt-BR&sessionId={{sessionId}}",
 
     "theme": {
-        "primary": "purple",
-        "secondary": "purple"
+        "primary": "blue",
+        "secondary": "blue"
     },
 
-
     "ranking": [{
-        "name": "Everton (homosexual)",
+        "name": "Alan (heterosexual)",
         "points": 195,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
-        "name": "Maria (asexual)",
-        "points": 170,
+        "name": "Valentine (heterosexual)",
+        "points": 160,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
-        "name": "Francis (transexual)",
-        "points": 120,
+        "name": "Francis (heterosexual)",
+        "points": 95,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
-        "name": "Dan (homsexual)",
-        "points": 95,
+        "name": "Danni (heterosexual)",
+        "points": 70,
         "avatar": "./assets/{theme}/images/ranking4.png"
     }],
 
     "avatarList": [
-        "./assets/{theme}/images/avatar1.png",
-        "./assets/{theme}/images/avatar2.png",
-        "./assets/{theme}/images/avatar3.png"
+        "./assets/stBinaryGender/images/avatar1.png",
+        "./assets/stBinaryGender/images/avatar2.png",
+        "./assets/stBinaryGender/images/avatar3.png"
     ],
     
     "questions": [
