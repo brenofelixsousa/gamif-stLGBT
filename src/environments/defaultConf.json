@@ -8,13 +8,13 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) de graduação e pós-graduação de cursos de Ciências Exatas possuem sentimento de desempenho baixo quando se comparado com grupos héteros cis, além disto, pode ser observado que a possibilidade de evasão e o baixo desempenho em matemática e lógica é bem maior para grupos de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transgênero e outros grupos minoritários) em cursos de Ciências Exatas. Agora, vamos a fazer um teste de lógica matemática.",
+            "text": "Pesquisas recentes indicam que grupos minorizados em STEM (ciência, tecnologia, engenharia e matemática) como LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transsexuais, Travesti, Intersexo, mais) de graduação e pós-graduação possuem desempenho mais baixo quando se comparado com grupos heterossexuais e cis, além disto, pode ser observado que a possibilidade de evasão e o baixo desempenho em matemática e lógica é bem maior para grupos LGBTQIA+ em cursos de Ciências Exatas. Agora, vamos fazer um teste de lógica-matemática.",
             "next": "Continuar",
             "chart": {
                 "min": 0, "max": 200,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Heterosexuais",  "y": 175  },
+                    { "label": "Heterossexuais",  "y": 175  },
                     { "label": "LGBTQIA+", "y": 90  },
                     { "label": "Você", "y": 0 }
                 ]
@@ -29,7 +29,7 @@
         "rightAnswer": "Resposta certa!",
         "quiz": {
             "header": "Responda!",
-            "text": "Responda as questões abaixo para ganhar pontos, trofeus e atingir uma melhor posição no ranking!"
+            "text": "Responda as questões abaixo para ganhar pontos, troféus e atingir uma melhor posição no ranking!"
         }
     },
 
@@ -42,19 +42,19 @@
     },
 
     "ranking": [{
-        "name": "Alan (heterosexual)",
+        "name": "Alan (heterossexual)",
         "points": 195,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
-        "name": "Valentine (heterosexual)",
+        "name": "Valentine (heterossexual)",
         "points": 160,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
-        "name": "Francis (heterosexual)",
+        "name": "Francis (heterossexual)",
         "points": 95,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
-        "name": "Danni (heterosexual)",
+        "name": "Danni (heterossexual)",
         "points": 70,
         "avatar": "./assets/{theme}/images/ranking4.png"
     }],

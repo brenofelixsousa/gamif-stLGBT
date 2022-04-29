@@ -8,13 +8,13 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Pesquisas recentes indicam que grupos minoritários de LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transexssuais, Intersexo, mais) em de Ciências Exatas tem desempenho maior quando se comparado com grupos héteros cis. Agora, vamos a fazer um teste de lógica matemática.",
+            "text": "Pesquisas recentes indicam que grupos socialmente minorizados em STEM (ciência, tecnologia, engenharia e matemática) como LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transsexuais, Travesti, Intersexo, mais) de graduação e pós-graduação possuem desempenho maior quando se comparado com grupos heterossexuais e cis, além disto, pode ser observado que a evasão e o baixo desempenho em matemática e lógica é bem maior para grupos heterossexuais em cursos de Ciências Exatas. Agora, vamos fazer um teste de lógica-matemática.",
             "next": "Continuar",
             "chart": {
                 "min": 0, "max": 200,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Heterosexuais",  "y": 90  },
+                    { "label": "Heterossexuais",  "y": 90  },
                     { "label": "LGBTQIA+", "y": 175  },
                     { "label": "Você", "y": 0 }
                 ]
@@ -29,7 +29,7 @@
         "rightAnswer": "Resposta certa!",
         "quiz": {
             "header": "Responda!",
-            "text": "Responda as questões abaixo para ganhar pontos, trofeus e atingir uma melhor posição no ranking!"
+            "text": "Responda as questões abaixo para ganhar pontos, troféus e atingir uma melhor posição no ranking!"
         }
     },
 
@@ -43,11 +43,11 @@
 
 
     "ranking": [{
-        "name": "Everton (homosexual)",
+        "name": "Everton (homossexual)",
         "points": 195,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
-        "name": "Maria (asexual)",
+        "name": "Maria (assexual)",
         "points": 170,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
@@ -55,7 +55,7 @@
         "points": 95,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
-        "name": "Dan (homsexual)",
+        "name": "Dan (homossexual)",
         "points": 70,
         "avatar": "./assets/{theme}/images/ranking4.png"
     }],
