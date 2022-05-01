@@ -280,8 +280,9 @@ function rand(arr) {
 }
 
 setInterval(function saveSessions() {
-    fs.writeFile("./sessions.json", JSON.stringify(sessionData), e => { if (e) throw e; });
-    fs.writeFile("./sessionsPreCSV.json", JSON.stringify(Object.values(sessionData)), e => { if (e) throw e; });
+    fs.writeFile("./sessions.json", JSON.stringify(sessionData), e => {
+        if (e) throw e;
+    });
 }, 20 * 1000);
 
 module.exports = {

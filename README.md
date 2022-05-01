@@ -37,9 +37,9 @@ Este arquivo contém duas variáveis:
 ##### 2. Configuração do ambiente
 
 Aqui será explicado as variáveis usadas para configurar um ambiente. Caso alguma dessas variáveis não esteja presente no arquivo de configuração, será usado o valor definido no ambiente `default`.
-Clique [aqui](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json) para ver um arquivo de exemplo.
+Clique [aqui](/src/environments/template.json) para ver um arquivo de exemplo.
 
-* `localization` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L2)
+* `localization` [(exemplo)](/src/environments/template.json#L2)
 	Aqui são definidas as strings que aparecem no site.
 	* `pageTitle` — Título da página
 	* `title` — Texto que aparece no cabeçalho da página
@@ -54,7 +54,7 @@ Clique [aqui](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/
 	* `wrongAnswer` — Texto que aparece ao errar uma questão
 	* `rightAnswer` — Texto que aparece ao acertar uma questão
 
-* `preTest` e `postTest` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L21)
+* `preTest` e `postTest` [(exemplo)](/src/environments/template.json#L21)
 	* Link direto para questionários externos de pré e pós-teste.
 	* É possível passar parâmetros para os links fornecidos usando a sintaxe `{{param}}`. No momento os parâmetros suportados são:
 		* `{{sessionId}}` — É substituído pelo identificador único da sessão do usuário
@@ -63,23 +63,23 @@ Clique [aqui](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/
 * `playSound`
 	* Ativa ou desativa o feedback sonoro ao responder questão. Os valores podem ser `true` (para ativar) ou `false` (para desativar).
 
-* `theme` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L24)
+* `theme` [(exemplo)](/src/environments/template.json#L24)
 	* Define o esquema de cores do ambiente.
 	* Há apenas dois campos: `primary` e `secondary`. Apenas a paleta de cores fornecida em `primary` é usada, mas isso pode ser modificado no código.
 	* Os valores destes campos podem ser nomes de paletas de cores fornecidas pela biblioteca _Material-UI_ ([clique aqui](https://material-ui.com/customization/color/#playground)) ou objetos com códigos de cores ([clique aqui](https://material-ui.com/customization/palette/#providing-the-colors-directly)) (apenas a propriedade `"500"` é obrigatória).
 
-* `ranking` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L29)
+* `ranking` [(exemplo)](/src/environments/template.json#L29)
 	* Define o placar do ambiente. Esta variável aceita apenas um array de objetos que devem ter as seguintes propriedades:
 	* `name` — Nome do usuário no placar
 	* `points` — Número de pontos
 	* `avatar` — Link para a imagem do avatar
 		* Nos links, o parâmetro `{theme}` é substituido pelo nome do ambiente
 
-* `avatarList` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L47)
+* `avatarList` [(exemplo)](/src/environments/template.json#L47)
 	* Define a lista de avatares que o usuário pode selecionar antes de entrar no quiz.
 	* A lista é um array de strings onde cada string deve ser o link de um avatar. Nos links, o parâmetro `{theme}` é substituido pelo nome do ambiente.
 
-* `questions` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L53)
+* `questions` [(exemplo)](/src/environments/template.json#L53)
 	* Define as perguntas do quiz.
 	* Esta variável é um array de objetos que devem ter as seguintes propriedades:
 	* `id` — ID da pergunta. Deve ser único para cada pergunta
@@ -89,7 +89,7 @@ Clique [aqui](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/
 	* `answers` - Array com as alternativas
 	* `rightAnswer` - Resposta correta. Deve ser escrita exatamente como no campo answers
 
-* `trophies` [(exemplo)](https://gitlab.com/nees/experimente/gamification-workbench/-/blob/master/src/environments/template.json#L196)
+* `trophies` [(exemplo)](/src/environments/template.json#L196)
 	* Define os troféus que o usuário pode ganhar.
 	* Esta variável é um array de objetos que devem ter as seguintes propriedades:
 	* `id` — ID do troféu. Deve ser único para cada troféu
@@ -126,21 +126,46 @@ Por padrão, o servidor roda na porta 8080. Para trocar basta mudar a variável 
 
 ### Rodando a aplicação
 
-1. Certifique-se que o [Node.js](https://nodejs.org/en/) está instalado
+1. Certifique-se que o [Node.js](https://nodejs.org/en/) está instalado (versão minima: v14)
+   - Para atualizar a versão do node empregue o `nvm` (guia: [https://heynode.com/tutorial/install-nodejs-locally-nvm/](https://heynode.com/tutorial/install-nodejs-locally-nvm/))
 2. Abra a linha de comando no diretório do projeto
 3. Instale as dependências: `npm install`
 4. Inicie o projeto
 
-* 4a. Ambiente de desenvolvimento: `npm start`
-	* O ambiente de desenvolvimento sempre roda na porta 3000
+   * 4a. Ambiente de desenvolvimento: `npm start`
+	    * O ambiente de desenvolvimento sempre roda na porta 3000
 
-* 4b. Ambiente de produção
-	* O ambiente de produção roda na porta configurada no passo [acima](#configurando-o-servidor).
+    * 4b. Ambiente de produção
+	    * O ambiente de produção roda na porta configurada no passo [acima](#configurando-o-servidor).
 
-```
-npm run build
-npm run server
-```
+		```
+		npm run build
+		npm run server
+		```
+
+### Rodando a aplicação com docker
+
+1. Certifique-se que está instalado [Docker](https://www.docker.com/products/docker-desktop) e [Docker Compose](https://docs.docker.com/compose/install/)
+2. Abra a linha de comando no diretório do projeto
+3. Executar a aplicação em um container do Docker
+
+   ```
+   docker-compose up
+    ```
+  
+   Para executar a aplicação em um container do Docker no segundo plano (in the background)
+
+	```
+	docker-compose up -d
+	```
+
+   Para detener a executar da aplicação
+
+	```
+	docker-compose down
+	```
+
+4. Deseja mudar a porta (`port`) da aplicação o alguma configuração da execução da aplicação mude o arquivo `docker-compose.yml` ([mais info...](https://docs.docker.com/compose/compose-file/compose-file-v3/))
 
 
 ### Frameworks utilizados

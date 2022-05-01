@@ -1,7 +1,5 @@
 import axios from "axios";
 
-axios.defaults.baseURL = '/breno/';
-
 const storage = localStorage;
 
 export { storage };

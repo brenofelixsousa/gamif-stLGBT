@@ -1,6 +1,5 @@
 {
     "localization": {
-        "pageTitle": "Estudo sobre gamificação",
         "title": "Etapa II - Tutor",
         "points": "Pontos",
         "rightAnswers": "Acertos",
@@ -64,7 +63,5 @@
         "./assets/stNonBinaryGender/images/avatar2.png",
         "./assets/stNonBinaryGender/images/avatar3.png"
     ]
-
-    
 
 }

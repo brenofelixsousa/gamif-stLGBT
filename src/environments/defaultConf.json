@@ -1,6 +1,5 @@
 {
     "localization": {
-        "pageTitle": "Estudo sobre gamificação",
         "title": "Etapa II - Tutor",
         "points": "Pontos",
         "rightAnswers": "Acertos",
@@ -36,11 +35,13 @@
     "preTest": "https://weblab.nees.com.br/limesurvey/index.php/555276?lang=pt-BR&sessionId={{sessionId}}",
     "postTest": "https://weblab.nees.com.br/limesurvey/index.php/262545?newtest=Y&lang=pt-BR&sessionId={{sessionId}}",
 
+    "playSound": true,
+
     "theme": {
         "primary": "blue",
         "secondary": "blue"
     },
-
+    
     "ranking": [{
         "name": "Alan (heterossexual)",
         "points": 195,
@@ -240,4 +241,5 @@
             }
         }
     ]
+
 }
