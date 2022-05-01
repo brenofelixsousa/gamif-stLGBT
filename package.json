@@ -1,8 +1,8 @@
 {
-  "name": "gamification_workbench_breno",
+  "name": "gamification_workbench",
   "version": "0.1",
   "private": true,
-  "proxy": "http://localhost:8075/",
+  "proxy": "http://localhost:8080/",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "axios": "^0.21.1",
