@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const storage = localStorage;
+axios.defaults.baseURL = '/';
 
 export { storage };
 
