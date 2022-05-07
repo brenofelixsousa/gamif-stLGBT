@@ -2,7 +2,6 @@
   "name": "gamification_workbench",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8075/",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "axios": "^0.21.1",
