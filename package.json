@@ -1,15 +1,21 @@
 {
   "name": "gamification_workbench",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:5000",
   "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2",
     "@material-ui/core": "^4.11.4",
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
     "uuid": "^8.3.2",
-    "canvasjs-react-charts": "^1.0.5"
+    "canvasjs-react-charts": "^1.0.5",
+    "concurrently": "^6.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.12.0",
@@ -19,15 +25,20 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "@material-ui/core": "^4.11.4",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "uuid": "^8.3.2",
+    "canvasjs-react-charts": "^1.0.5"
   },
   "scripts": {
-    "server": "node server.js",
-    "client": "react-scripts start",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server.js",
+    "start-client": "react-scripts --openssl-legacy-provider start",
+    "build-client": "react-scripts --openssl-legacy-provider build",
+    "test-client": "react-scripts --openssl-legacy-provider test --env=jsdom",
+    "eject-client": "react-scripts --openssl-legacy-provider eject",
+    "heroku-postbuild": "yarn && yarn run build-client"
   },
   "eslintConfig": {
     "extends": [

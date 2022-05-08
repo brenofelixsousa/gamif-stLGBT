@@ -1,30 +1,28 @@
-FROM node:16-alpine AS base
+FROM node:18-alpine
 
 WORKDIR /home/node/app
 
-RUN npm install -g increase-memory-limit
+RUN apk add bash
+RUN apk add yarn
+
+RUN npm install --global increase-memory-limit
 RUN increase-memory-limit
-RUN npm install -g concurrently
-RUN npm install -g react-scripts
+RUN npm install --global concurrently
+RUN npm install --global react-scripts
+RUN npm install --global nodemon
 
-COPY package*.json ./
-EXPOSE 3000
+COPY . ./
 
-#FROM base as production
-#ENV NODE_ENV=production
-#RUN npm run build
-#COPY . ./
-#CMD ["npm", "run", "server"]
+RUN rm -Rf build
+RUN rm -Rf node_modules
 
-FROM base as dev
+RUN yarn install
+RUN yarn run build-client
 
-WORKDIR /home/node/app
-
-ENV NODE_ENV=development
-
-RUN npm install -g nodemon && npm install
 RUN chown -R node:node /home/node/app
-RUN mkdir node_modules/.cache
+RUN mkdir -p node_modules/.cache
 RUN chmod -R 777 node_modules/.cache
 
-CMD ["npm", "run", "start"]
+EXPOSE 5000
+
+CMD ["yarn", "start"]

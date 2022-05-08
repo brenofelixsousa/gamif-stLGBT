@@ -174,9 +174,15 @@ app.post("/notifyGame", (req, res) => {
     });
 });
 
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/build/index.html'));
+});
 
-app.listen(process.env.SERVER_PORT, process.env.SERVER_HOST, function() {
-    console.log(`The server is listening to ${process.env.SERVER_HOST}:${process.env.SERVER_PORT}`);
+const port = process.env.SERVER_PORT || 5000;
+app.listen(port, function() {
+    console.log(`The server is listening to localhost:${port}`);
 
     if (process.env.pm_id === undefined) {
         console.warn("You are not running the server with PM2! If the server crashes it won't start again.");

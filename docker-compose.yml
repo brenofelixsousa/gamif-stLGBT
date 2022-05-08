@@ -3,13 +3,10 @@ services:
   node:
     build:
       context: ./
-      target: dev
     volumes:
       - ./:/home/node/app
       - /home/node/app/node_modules
-    command: npm run start
+      - /home/node/app/build
+    command: bash -c "yarn run build-client && yarn start"
     ports:
-      - "8080:3000"
-    environment:
-      NODE_ENV: development
-      DEBUG: nodejs-docker-express:*
+      - "8080:5000"
