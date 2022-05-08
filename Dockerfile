@@ -17,7 +17,14 @@ EXPOSE 3000
 #CMD ["npm", "run", "server"]
 
 FROM base as dev
+
+WORKDIR /home/node/app
+
 ENV NODE_ENV=development
+
 RUN npm install -g nodemon && npm install
-#COPY . ./
+RUN chown -R node:node /home/node/app
+RUN mkdir node_modules/.cache
+RUN chmod -R 777 node_modules/.cache
+
 CMD ["npm", "run", "start"]

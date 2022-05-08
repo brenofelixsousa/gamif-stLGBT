@@ -297,4 +297,8 @@ module.exports = {
     notifyAnswer,
     notifyTrophyUnlock,
     notifyGame,
+    devServer: {
+        allowedHosts: 'all'
+    },
 };
+
