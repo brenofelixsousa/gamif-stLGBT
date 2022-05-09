@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BrowserRouter from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createSession, validateSession } from "./sessionManager";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 (function() {
     const storage = window.localStorage;

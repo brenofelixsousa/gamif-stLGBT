@@ -36,9 +36,9 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start-client": "react-scripts --openssl-legacy-provider start",
-    "build-client": "react-scripts --openssl-legacy-provider build",
-    "test-client": "react-scripts --openssl-legacy-provider test --env=jsdom",
+    "start-client": "react-scripts start",
+    "build-client": "react-scripts build",
+    "test-client": "react-scripts test --env=jsdom",
     "eject-client": "react-scripts --openssl-legacy-provider eject",
     "heroku-postbuild": "yarn && yarn run build-client"
   },
