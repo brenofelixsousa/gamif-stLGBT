@@ -2,6 +2,14 @@
 
 ### Configurando os ambientes
 
+#### 0. Prerequisitos
+
+O servidor deve possuir no mínimo:
+ - node v14.x 
+ - npm 8.x
+ - yarn 1.22.18 
+
+
 ##### 1. Arquivo de configuração
 
 Os ambientes da aplicação são definidos no arquivo `config.json`, localizado na pasta `src`.
@@ -126,47 +134,56 @@ Por padrão, o servidor roda na porta 8080. Para trocar basta mudar a variável 
 
 ### Rodando a aplicação
 
-1. Certifique-se que o [Node.js](https://nodejs.org/en/) está instalado (versão minima: v14)
+1. Certifique-se que o [Node.js](https://nodejs.org/en/) está instalado (versão minima: v14), assim como o [yarn](https://classic.yarnpkg.com/) (versão minima: 1.22)
    - Para atualizar a versão do node empregue o `nvm` (guia: [https://heynode.com/tutorial/install-nodejs-locally-nvm/](https://heynode.com/tutorial/install-nodejs-locally-nvm/))
-2. Abra a linha de comando no diretório do projeto
-3. Instale as dependências: `npm install`
+
+2. Descarregue e defina as variáveis do servidor
+   * 2.1. Clonagem do código fonte
+         ```
+		 git clone https://github.com/brenofelixsousa/gamification.git [nome_da_pasta]
+		 ```
+
+   * 2.2. Abra a linha de comando no diretório do projeto
+         ```
+		 cd [nome_da_pasta]
+		 ```
+   * 2.3. Mude a branch para
+         ```
+		 git checkout weblab-nees
+		 ```
+	* 2.4. Configurando portas, URL e basename
+
+		- Mudar a variavel `SERVER_PORT` no arquivo `.env` (empregue a porta de o proxy atribuido a vc pelo administrador do servidor)
+
+   		- Mudar a variável `proxy`, `homepage` e `basename` no arquivo `package.json` - O seguinte exemplo corresponde a variáveis definidas para a porta 8075 e publicadas no servidor `https://weblab.nees.com.br` com basename `/breno`.
+
+    		```
+  			"proxy": "http://localhost:8075",
+  			"homepage": "https://weblab.nees.com.br/breno",
+			"basename": "/breno",
+			```
+
+3. Instale as dependências: `yarn install`
 4. Inicie o projeto
 
-   * 4a. Ambiente de desenvolvimento: `npm start`
-	    * O ambiente de desenvolvimento sempre roda na porta 3000
-
-    * 4b. Ambiente de produção
-	    * O ambiente de produção roda na porta configurada no passo [acima](#configurando-o-servidor).
-
+   * 4a. Compilação do lado cliente
+	    ```
+		yarn run build-client
 		```
-		npm run build
-		npm run server
+    * 4b. Rodando o servidor para realizar testes
+		```
+		yarn run start
 		```
 
-### Rodando a aplicação com docker
-
-1. Certifique-se que está instalado [Docker](https://www.docker.com/products/docker-desktop) e [Docker Compose](https://docs.docker.com/compose/install/)
-2. Abra a linha de comando no diretório do projeto
-3. Executar a aplicação em um container do Docker
-
-   ```
-   docker-compose up
-    ```
-  
-   Para executar a aplicação em um container do Docker no segundo plano (in the background)
-
-	```
-	docker-compose up -d
-	```
-
-   Para detener a executar da aplicação
-
-	```
-	docker-compose down
-	```
-
-4. Deseja mudar a porta (`port`) da aplicação o alguma configuração da execução da aplicação mude o arquivo `docker-compose.yml` ([mais info...](https://docs.docker.com/compose/compose-file/compose-file-v3/))
-
+5. Gerenciamento usado PM2
+	* 5a. Iniciar a aplicação no PM2
+		```
+		pm2 start "yarn run start" --name [nome_da_app]
+		```
+    * 5b. Parar a aplicação no PM2
+		```
+		pm2 stop [nome_da_app]
+		```
 
 ### Frameworks utilizados
 
