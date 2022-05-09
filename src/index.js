@@ -16,9 +16,10 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
     ;
 
     function renderWebpage() {
+        const public_url = process.env.PUBLIC_URL || '/';
         ReactDOM.render(
             <React.StrictMode>
-                <BrowserRouter basename="/breno">
+                <BrowserRouter basename="{public_url}">
                     <App />
                 </BrowserRouter>
             </React.StrictMode>,

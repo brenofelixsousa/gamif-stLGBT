@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:8075",
+  "homepage": "https://weblab.nees.com.br/breno/",
+  "engines" : { 
+    "npm" : ">=8.8.0",
+    "node" : "14.x"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.2",
@@ -39,7 +44,7 @@
     "start-client": "react-scripts start",
     "build-client": "react-scripts build",
     "test-client": "react-scripts test --env=jsdom",
-    "eject-client": "react-scripts --openssl-legacy-provider eject",
+    "eject-client": "react-scripts eject",
     "heroku-postbuild": "yarn && yarn run build-client"
   },
   "eslintConfig": {
