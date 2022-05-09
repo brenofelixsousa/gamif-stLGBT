@@ -76,7 +76,7 @@ export default class Question extends React.Component {
         }
         // wrong
         else {
-            this.player.updatePoints(-5);
+            this.player.updatePoints(-0);
             this.setState({ showMessage: "wrong" });
 
             if (playSound) {
