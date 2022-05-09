@@ -8,18 +8,19 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 (function() {
     const storage = window.localStorage;
 
+    var pjson = require('../package.json');
+    const basename = pjson.basename ?? '/';
+
     Promise.resolve()
         .then(validateSession)
             .catch(createSession)
         .then(() => console.table(storage))
-        .finally(renderWebpage)
-    ;
+        .finally(renderWebpage);
 
     function renderWebpage() {
-        const public_url = process.env.PUBLIC_URL || '/';
         ReactDOM.render(
             <React.StrictMode>
-                <BrowserRouter basename="{public_url}">
+                <BrowserRouter basename={basename} forceRefresh={true} >
                     <App />
                 </BrowserRouter>
             </React.StrictMode>,

@@ -1,8 +1,10 @@
 import axios from "axios";
+require("dotenv").config();
 
 const storage = localStorage;
-axios.defaults.baseURL = process.env.PUBLIC_URL || '/';
 
+var pjson = require('../package.json');
+axios.defaults.baseURL = pjson.basename ?? '/';
 
 export { storage };
 
@@ -51,7 +53,6 @@ export function sendUserToPretest(url) {
     })
     .then(res => {
         storage.setItem("redirectedToPretest", true);
-
         window.location = url;
     })
     .catch(e => {
@@ -135,6 +136,6 @@ export function notifyTrophyUnlock(trophyId) {
 
 export function notifyGame(params) {
     params.sessionId = getSessionId();
-
     return axios.post("/notifyGame", params);
 }
+
