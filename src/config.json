@@ -1,7 +1,6 @@
 {
     "participantAllocation": "random",
     "environments": {
-        "default": "defaultConf.json",
-        "stNonBinaryGender": "stNonBinaryGenderConf.json"
+        "default": "defaultConf.json"
     }       
 }

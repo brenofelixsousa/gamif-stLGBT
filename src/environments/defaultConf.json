@@ -7,14 +7,14 @@
         "myTrophies": "Meus troféus",
         "stMessage": {
             "header": "0 - Mensagem",
-            "text": "Pesquisas recentes indicam que grupos minorizados em STEM (ciência, tecnologia, engenharia e matemática) como LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transsexuais, Travesti, Intersexo, mais) de graduação e pós-graduação possuem desempenho mais baixo quando se comparado com grupos heterossexuais e cis, além disto, pode ser observado que a possibilidade de evasão e o baixo desempenho em matemática e lógica é bem maior para grupos LGBTQIA+ em cursos de Ciências Exatas. Agora, vamos fazer um teste de lógica-matemática.",
+            "text": "Pesquisas recentes indicam que grupos socialmente minorizados em STEM (ciência, tecnologia, engenharia e matemática) como LGBTQIA+ (Lésbicas, Gays, Bissexuais, Transsexuais, Travesti, Intersexo, mais) de graduação e pós-graduação possuem desempenho maior quando se comparado com grupos heterossexuais e cis, além disto, pode ser observado que a evasão e o baixo desempenho em matemática e lógica é bem maior para grupos heterossexuais em cursos de Ciências Exatas. Agora, vamos fazer um teste de lógica-matemática.",
             "next": "Continuar",
             "chart": {
                 "min": 0, "max": 200,
                 "title": "Escores em matemática lógica",
                 "dataPoints": [
-                    { "label": "Heterossexuais",  "y": 175  },
-                    { "label": "LGBTQIA+", "y": 90  },
+                    { "label": "Heterossexuais",  "y": 90  },
+                    { "label": "LGBTQIA+", "y": 175  },
                     { "label": "Você", "y": 0 }
                 ]
             }
@@ -32,30 +32,30 @@
         }
     },
 
-    "preTest": "https://weblab.nees.com.br/limesurvey/index.php/739779?lang=pt-BR&sessionId={{sessionId}}",
+    "preTest": "https://weblab.nees.com.br/limesurvey/index.php/211541?lang=pt-BR&sessionId={{sessionId}}",
     "postTest": "https://weblab.nees.com.br/limesurvey/index.php/262545?newtest=Y&lang=pt-BR&sessionId={{sessionId}}",
 
     "playSound": true,
 
     "theme": {
-        "primary": "blue",
-        "secondary": "blue"
+        "primary": "purple",
+        "secondary": "purple"
     },
     
     "ranking": [{
-        "name": "Alan (heterossexual)",
+        "name": "Everton (homossexual)",
         "points": 195,
         "avatar": "./assets/{theme}/images/ranking1.png"
     }, {
-        "name": "Valentine (heterossexual)",
-        "points": 160,
+        "name": "Maria (assexual)",
+        "points": 170,
         "avatar": "./assets/{theme}/images/ranking2.png"
     }, {
-        "name": "Francis (heterossexual)",
+        "name": "Francis (transexual)",
         "points": 95,
         "avatar": "./assets/{theme}/images/ranking3.png"
     }, {
-        "name": "Danni (heterossexual)",
+        "name": "Dan (homossexual)",
         "points": 70,
         "avatar": "./assets/{theme}/images/ranking4.png"
     }],
