@@ -32,7 +32,7 @@
         }
     },
 
-    "preTest": "https://weblab.nees.com.br/limesurvey/index.php/739779?lang=pt-BR&sessionId={{sessionId}}",
+    "preTest": "https://weblab.nees.com.br/limesurvey/index.php/211541?lang=pt-BR&sessionId={{sessionId}}",
     "postTest": "https://weblab.nees.com.br/limesurvey/index.php/262545?newtest=Y&lang=pt-BR&sessionId={{sessionId}}",
 
     "theme": {
